@@ -23,7 +23,7 @@ axios(url)
     const topScorers = [];
 
     statsTable.each(function() {
-      //for some reason, needs to be function() instead of ()=>; arrow functions have lexical this, so takes this from where it's defined rather than where it's passed, which will make this not work!
+      //needs to be function() instead of ()=>; arrow functions have lexical this, so takes this from where it's defined rather than where it's passed, which will make this not work!
       //want to know rank, player name, nationality, and how many goals scored
       //want to turn the html into a json object with this info
       const rank = $(this) //$(this) to represent the element... could also do (i,element)=>{} at top and use $(element) as can't use the $(this) w/ fat arrow as mentioned above
